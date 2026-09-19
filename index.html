@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Link Parallel Robot Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="panel">
+            <div class="logo-header">
+                <img src="logo.png" alt="University Logo" class="university-logo">
+                <h1>🤖 2-Link Parallel Robot</h1>
+            </div>
+
+            <div class="section">
+                <label for="textInput">Text to draw:</label>
+                <input type="text" id="textInput" placeholder="e.g. HELLO" value="HELLO">
+                <button id="drawTextBtn" class="btn green">✏️ Draw Text</button>
+            </div>
+
+            <div class="section">
+                <label>Target position:</label>
+                <div class="coords">
+                    <span>X: <b id="xVal">0</b> mm</span>
+                    <span>Y: <b id="yVal">150</b> mm</span>
+                </div>
+                <input type="range" id="xSlider" min="-200" max="200" step="1" value="0">
+                <input type="range" id="ySlider" min="-150" max="300" step="1" value="150">
+            </div>
+
+            <div class="section">
+                <button id="clearBtn" class="btn red">🗑️ Clear Path</button>
+                <button id="wsBtn" class="btn blue">📐 Toggle Workspace</button>
+            </div>
+
+            <div class="section info">
+                <p><b>Left motor angle:</b> <span id="angLeft">—</span>°</p>
+                <p><b>Right motor angle:</b> <span id="angRight">—</span>°</p>
+                <p><b>Status:</b> <span id="status">Ready</span></p>
+            </div>
+
+            <footer>
+                <p>Designer: MohammadReza GohariManesh</p>
+                <p>Supervisor: Dr. Masoud GohariManesh</p>
+                <p class="university">University of Torbat Heydarieh</p>
+                <p class="university-short">UTH</p>
+            </footer>
+        </aside>
+
+        <main class="canvas-wrap">
+            <canvas id="robotCanvas"></canvas>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
